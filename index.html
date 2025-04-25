@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ruleta de Videos V1.4</title>
+  
+<script src="functions.js" defer></script>
+<link rel="stylesheet" href="style.css">
+  </head>
+ <!-- Encabezado -->
+ <header id="encabezado">
+  <h1>Ruleta de Videos V1.4</h1>
+  <p>Haz clic en el botón para girar la ruleta y ver un video al azar.</p>
+</header>
+
+<!-- Contenedor principal -->
+<main id="contenedor-principal">
+  <!-- Ruleta -->
+  <section id="ruleta-container">
+    <div id="ruleta">
+      <canvas id="canvas" width="400" height="400"></canvas>
+    </div>
+  </section>
+
+  <!-- Botón central -->
+  <section id="boton-container">
+    <button id="boton-suerte">Probar suerte</button>
+  
+
+  </section>
+
+  <!-- Contenedor de video -->
+  <section id="video-container">
+    <h2>Videos</h2>
+    <div id="contenedor-video"></div>
+  </section>
+  <!-- Sidebar -->
+<div id="sidebar">
+  <div id="sidebar-toggle">
+    <span>&#9881;</span> <!-- Ícono de configuración (⚙) -->
+  </div>
+  <div id="sidebar-content">
+    <button id="resetear-lista">Resetear Lista</button>
+  </div>
+</div>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <h2 id="modal-title">Niño Seleccionado</h2>
+      <p id="modal-message">El niño seleccionado es:</p>
+      <button id="ver-video">Ver Video</button>
+      <button id="cerrar-modal">Cancelar</button>
+    </div>
+  </div>
+
+</main>
+
+</body>
+</html>
