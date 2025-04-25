@@ -43,6 +43,7 @@ La aplicación evita repetir videos ya vistos almacenando la lista de niños sel
 
 - Navegador web moderno con soporte para HTML5, CSS3 y JavaScript.
 - Archivos de video ubicados en la carpeta `videos/` con los nombres especificados en `functions.js`.
+
 ![Configuración - Los videos deben estar localizados en la carpeta Videos](images/Ruleta-de-videos-5.jpg)
 ## Autor
 
