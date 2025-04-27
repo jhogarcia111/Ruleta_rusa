@@ -36,8 +36,10 @@ La aplicación evita repetir videos ya vistos almacenando la lista de niños sel
 1. Abrir `index.html` en un navegador web moderno.
 2. Hacer clic en el botón "Probar suerte" para girar la ruleta.
 3. Ver el modal con el niño seleccionado y elegir "Ver Video" para reproducirlo.
-4. Usar el botón "Resetear Lista" en el sidebar para reiniciar la selección y permitir repetir videos.
-![Funcionabilidad para evitar repetir un video y resetear el sistema](images/Ruleta-de-videos-4.jpg)
+4. Cada vez que un niño ha sido seleccionado y su video ha sido visto, quedará registrado en el módulo de administración para que no vuelva a salir de nuevo.de esta forma se evita repetir videos.
+5. En el módulo de Adminstración es posible ver los videos de los niños oprimiendo el botón junto el nombre del niño como se muestra en la foto siguiente.
+6. Es posible resetear la lista de los niños que ya salieron para volver a comenzar la selección aleatoria.
+![Funcionabilidad para evitar repetir un video y resetear el sistema](images/Ruleta-de-videos-6.jpg)
 
 ## Requisitos
 
