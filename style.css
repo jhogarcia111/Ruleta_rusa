@@ -1,6 +1,5 @@
-
-    /* Estilos para la ruleta */
-    /* Estilo general */
+/* Estilos para la ruleta */
+/* Estilo general */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -19,13 +18,14 @@ body {
 
 /* Contenedor principal */
 #contenedor-principal {
-    display: flex;
-    align-items: center;
-    margin: 20px;
-    flex-wrap: wrap;
-    align-content: space-around;
-    justify-content: space-around;
-  }
+  display: flex;
+  align-items: center;
+  margin: 20px;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: space-around;
+}
+
 /* Ruleta */
 #ruleta-container {
   width: 300px;
@@ -38,7 +38,8 @@ body {
   height: 420px;
   margin-left: 100px;
   border-radius: 20%;
- /* border: 5px solid #000;
+  /*
+  border: 5px solid #000;
   */
   background: conic-gradient(red, yellow, green, blue, pink, orange, purple, cyan, lightblue);
 }
@@ -69,20 +70,20 @@ body {
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
 }
 #video-container {
-    width: 500px;
-    height: 300px;
-    border: 2px solid #ddd;
-    border-radius: 5px;
-    background-color: #f0f0f0;
-    padding: 20px;
-    display: flex
-;
-    /* justify-content: center; */
-    /* align-items: center; */
+  width: 500px;
+  height: 300px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  padding: 20px;
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
 }
 /* Animación de vibración */
 @keyframes vibrar {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateX(0);
   }
   25% {
@@ -113,12 +114,17 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
   justify-content: center;
   align-items: center;
   z-index: 1000;
+}
+
+/* Mostrar modal cuando tenga clase 'show' */
+.modal.show {
+  display: flex;
 }
 
 /* Estilo del contenido del modal */
@@ -128,7 +134,10 @@ body {
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   text-align: center;
-  width: 300px;
+    max-height: 80vh; /* Maximum height relative to viewport */
+  overflow-y: auto; /* Enable vertical scrolling when content overflows */
+  box-sizing: border-box; /* Include padding and border in height calculation */
+  width: 800px;
 }
 
 /* Botones del modal */
@@ -138,77 +147,196 @@ body {
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
-  margin: 10px;
+  margin: 0px 10px 0px 10px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-left: 0; /* Move elements more to the left */
 }
 
 .modal-content button:hover {
   background-color: #45a049;
 }
-  /* Estilo del Sidebar */
-#sidebar {
-    position: fixed;
-    right: 0;
-    top: 0;
-    width: 50px;
-    height: 100%;
-    background-color: #4CAF50; /* Color del sidebar */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
-    transition: width 0.3s ease;
-    overflow: hidden;
-  }
-  
-  #sidebar:hover {
-    width: 200px; /* Expandir el sidebar al hacer hover */
-  }
-  
-  /* Contenedor del botón Resetear Lista */
-  #sidebar-content {
-    margin-top: 50px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-  
-  #sidebar:hover #sidebar-content {
-    opacity: 1; /* Mostrar el contenido al expandir */
-  }
-  
-  /* Botón de configuración */
-  #sidebar-toggle {
-    margin-top: 10px;
-    font-size: 24px;
+#admin-button{ 
+  background-color: #efb944;
     color: white;
-    cursor: pointer;
-  }
-  
-  #sidebar-toggle span {
-    display: block;
-    transform: rotate(0deg);
-    transition: transform 0.3s ease;
-  }
-  
-  #sidebar:hover #sidebar-toggle span {
-    transform: rotate(90deg); /* Rotar el ícono al expandir */
-  }
-  
-  /* Estilo del botón Resetear Lista */
-  #resetear-lista {
-    background-color: white;
-    color: #4CAF50;
     border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
+    border-radius: 10px;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
     cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  #resetear-lista:hover {
-    background-color: #45a049;
-    color: white;
-  }
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    animation: vibrar 1s infinite;
+}
+/* Admin modal styles - single container layout */
+#admin-modal {
+  max-width: 100%;
+  /*width: 90vw;
+  background-color: #fff;*/
+  border-radius: 12px;
+  /*padding: 20px;*/
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  margin: 0 auto;
+}
+
+/* Remove two-column layout */
+#admin-modal-columns {
+  display: flex;
+  margin-top: 20px;
+}
+
+/* Style the unified container */
+#admin-left-column {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 0px 4px 0px 2px;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+  max-height: 80%;
+  overflow-y: auto;
+}
+
+#admin-left-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#admin-left-column ul li {
+ /* padding: 8px 12px;*/
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#admin-left-column ul li:hover {
+  background-color: #e0f2f1;
+}
+/* Hide the right column since we want a single container */
+#admin-right-column {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+  max-height: 20%;
+  overflow-y: auto;
+}
+#admin-right-column h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #333;
+}
+/* Adjust table styles if needed */
+#selected-kids-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 8px;
+  background-color: transparent;
+}
+#selected-kids-table tbody tr {
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  border-radius: 6px;
+}
+
+#selected-kids-table td {
+  padding: 3px 15px;
+  text-align: left;
+  font-size: 14px;
+  color: #000;
+  border: none;
+}
+
+/* Estilo del Sidebar */
+#sidebar {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 50px;
+  height: 100%;
+  background-color: #4CAF50; /* Color del sidebar */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  transition: width 0.3s ease;
+  overflow: hidden;
+}
+
+#sidebar:hover {
+  width: 200px; /* Expandir el sidebar al hacer hover */
+}
+
+/* Contenedor del botón Resetear Lista */
+#sidebar-content {
+  margin-top: 50px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#sidebar:hover #sidebar-content {
+  opacity: 1; /* Mostrar el contenido al expandir */
+}
+
+/* Botón de configuración */
+#sidebar-toggle {
+  margin-top: 10px;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+#sidebar-toggle span {
+  display: block;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+#sidebar:hover #sidebar-toggle span {
+  transform: rotate(90deg); /* Rotar el ícono al expandir */
+}
+
+
+#resetear-lista {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 25px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+  display: inline-block;
+}
+
+#resetear-lista:hover {
+  background-color: #388E3C;
+}
+#footer-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 24px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 -1px 5px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+#footer-bar a {
+  color: white;
+  text-decoration: underline;
+  margin-left: 4px;
+}
+
+#footer-bar a:hover {
+  color: #d4d4d4;
+}

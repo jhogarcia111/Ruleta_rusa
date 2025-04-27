@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ruleta de Videos V1.4</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ruleta de Videos V1.5</title>
   
-<script src="functions.js" defer></script>
-<link rel="stylesheet" href="style.css">
-  </head>
+  <script src="functions.js" defer></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
  <!-- Encabezado -->
  <header id="encabezado">
-  <h1>Ruleta de Videos V1.4</h1>
+  <h1>Ruleta de Videos V1.5</h1>
   <p>Haz clic en el botón para girar la ruleta y ver un video al azar.</p>
 </header>
 
@@ -26,8 +27,6 @@
   <!-- Botón central -->
   <section id="boton-container">
     <button id="boton-suerte">Probar suerte</button>
-  
-
   </section>
 
   <!-- Contenedor de video -->
@@ -36,14 +35,14 @@
     <div id="contenedor-video"></div>
   </section>
   <!-- Sidebar -->
-<div id="sidebar">
-  <div id="sidebar-toggle">
-    <span>&#9881;</span> <!-- Ícono de configuración (⚙) -->
+  <div id="sidebar">
+    <div id="sidebar-toggle">
+      <span>&#9881;</span> <!-- Ícono de configuración (⚙) -->
+    </div>
+    <div id="sidebar-content">
+      <button id="admin-button">Admin</button>
+    </div>
   </div>
-  <div id="sidebar-content">
-    <button id="resetear-lista">Resetear Lista</button>
-  </div>
-</div>
 
   <div id="modal" class="modal">
     <div class="modal-content">
@@ -54,7 +53,37 @@
     </div>
   </div>
 
-</main>
+  <div id="admin-modal" class="modal">
+    <div class="modal-content">
+      <h2>Admin Module - Lista de Niños</h2>
+      <div id="admin-modal-columns">
+        <div id="admin-left-column">
+          <ul id="admin-list"></ul>
+        </div>
+        <div id="admin-right-column">
+          <h3>Listado de quienes ya salieron</h3>
+          <table id="selected-kids-table" style="border-collapse: collapse; width: 100%;">
+            <tbody>
+            </tbody>
+          </table>
+          <button id="resetear-lista" style="margin-top: 10px; align-self: flex-start;">Resetear Lista</button>
+        </div>
+      </div>
+      <button id="close-admin-modal" style="margin-top: 20px;">Cerrar</button>
+    </div>
+  </div>
 
+  <div id="admin-video-modal" class="modal">
+    <div class="modal-content">
+      <h2>Video del Niño</h2>
+      <div id="admin-video-container"></div>
+      <button id="close-admin-video-modal">Cerrar</button>
+    </div>
+  </div>
+
+</main>
+<footer id="footer-bar">
+  Desarrollado por <a href="https://github.com/jhogarcia111/" target="_blank" rel="noopener noreferrer">Jho</a>
+</footer>
 </body>
 </html>
