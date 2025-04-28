@@ -10,7 +10,7 @@ body {
 /* Encabezado */
 #encabezado {
   text-align: center;
-  padding: 20px;
+  padding: 10px 0 0 0;
   background-color: #4CAF50;
   color: white;
   border-bottom: 2px solid #ddd;
@@ -34,13 +34,12 @@ body {
   align-items: center;
 }
 #ruleta {
-  width: 420px;
-  height: 420px;
+  width: 480px;
+  height: 480px;
   margin-left: 100px;
-  border-radius: 20%;
-  /*
-  border: 5px solid #000;
-  */
+  border-radius: 10%;
+  /* border: 5px solid #00*/
+
   background: conic-gradient(red, yellow, green, blue, pink, orange, purple, cyan, lightblue);
 }
 
@@ -70,7 +69,7 @@ body {
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
 }
 #video-container {
-  width: 500px;
+  width: 40%;
   height: 300px;
   border: 2px solid #ddd;
   border-radius: 5px;
