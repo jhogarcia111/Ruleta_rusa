@@ -1,52 +1,65 @@
-# Ruleta de Videos V1.4
- ![Pantalla Principal](images/Ruleta-de-videos-1.jpg)
-Origen: Los padres de los niños en un colegio han grabado distintos videos como regalo para los niños. Se necesita una forma divertida y confiable que permita elegir de forma aleatoria el nombre de un niño y reproducir en la clase su video, tendremos una Ruleta que girará y elegirá aleatoriamente a un niñopara ver posteriormente el video con la particularidad de que no pueda ser elegido de nuevo durante la dinámica.
-Los videos estarán localizados dentro de la carpeta de "Videos" en la misma localizaciòn del proyecto.
+# Ruleta Rusa
 
-## Descripción
+## 📋 Descripción
+Aplicación de entretenimiento que simula el juego de ruleta rusa con elementos visuales y sonoros. Incluye diferentes variantes del juego, sistema de puntuación, efectos de sonido realistas, y opciones de personalización. Diseñado para proporcionar entretenimiento controlado con elementos de suspense y adrenalina. Dirigido a adultos que buscan entretenimiento digital y juegos de azar controlados. 
 
-La aplicación muestra una ruleta con segmentos que representan diferentes niños, cada uno asociado a un video. Al hacer clic en el botón "Probar suerte", la ruleta gira visualemnte y se detiene en un segmento aleatorio, seleccionando así a un niño. Se muestra un modal con el nombre del niño seleccionado y la opción de reproducir su video correspondiente.
+## 🎯 Información del Proyecto
+- **ID en Project Tracker**: 31
+- **Tipo**: web
+- **Estado**: Activo
 
-La aplicación evita repetir videos ya vistos almacenando la lista de niños seleccionados en el almacenamiento local del navegador (localStorage). También incluye una opción para resetear la lista y comenzar de nuevo.
+## 🌐 Puertos Asignados
+- **Backend**: http://localhost:3031
+- **Frontend**: http://localhost:4031
 
-![Modal Seleccionando un niño](images/Ruleta-de-videos-2.jpg)
+## 🗄️ Base de Datos
+- **Nombre**: `project_31`
+- **Tipo**: MySQL
+- **Puerto**: 3306
+- **Host**: localhost
+- **Cadena de Conexión**: `mysql://root@localhost:3306/project_31`
 
-La aplicación evita repetir videos ya vistos almacenando la lista de niños seleccionados en el almacenamiento local del navegador (localStorage). También incluye una opción para resetear la lista y comenzar de nuevo.
-![Visual luego de seleccionar un niño y oprimir ver video](images/Ruleta-de-videos-3.jpg)
 
+## 🚀 Inicio Rápido
 
-## Características principales
+### 1. Verificar Conexión al Project Tracker
+```bash
+curl http://localhost:3000/api/project-tracker/projects/31
+```
 
-- Ruleta animada que gira y selecciona un segmento aleatorio.
-- Modal que muestra el niño seleccionado y permite reproducir su video.
-- Reproducción de video integrada en la página.
-- Almacenamiento local para evitar repeticiones hasta que se resetee la lista.
-- Sidebar con botón para resetear la lista de seleccionados.
-- Diseño responsivo y estilizado con CSS.
-- Es posible ejecutar este proyecto sin necesidad de instalar ningún componente ni programa, incluso funciona si se descargan los archivos en una USB.
+### 2. Instalar Dependencias
+```bash
+npm install
+```
 
-## Archivos principales
+### 3. Iniciar Desarrollo
+```bash
+# Backend
+npm run dev
 
-- `index.html`: Estructura principal de la página web.
-- `style.css`: Estilos y diseño visual de la aplicación.
-- `functions.js`: Lógica de la ruleta, selección aleatoria, manejo del modal y reproducción de videos.
+# Frontend (en otra terminal)
+cd frontend && npm run dev
+```
 
-## Cómo usar
+## 📚 Documentación
+- [Guía de Integración con Cursor](./docs/GUIA_CURSOR_RULETA_RUSA.md)
+- [Guía de Debug Móvil](./docs/GUIA_DEBUG_MOVIL.md)
+- [Project Tracker](http://localhost:3000)
 
-1. Abrir `index.html` en un navegador web moderno.
-2. Hacer clic en el botón "Probar suerte" para girar la ruleta.
-3. Ver el modal con el niño seleccionado y elegir "Ver Video" para reproducirlo.
-4. Cada vez que un niño ha sido seleccionado y su video ha sido visto, quedará registrado en el módulo de administración para que no vuelva a salir de nuevo.de esta forma se evita repetir videos.
-5. En el módulo de Adminstración es posible ver los videos de los niños oprimiendo el botón junto el nombre del niño como se muestra en la foto siguiente.
-6. Es posible resetear la lista de los niños que ya salieron para volver a comenzar la selección aleatoria.
-![Funcionabilidad para evitar repetir un video y resetear el sistema](images/Ruleta-de-videos-6.jpg)
+## 🔧 Comandos Útiles
 
-## Requisitos
+### Crear Feature
+```bash
+curl -X POST http://localhost:3000/api/project-tracker/features \
+  -H "Content-Type: application/json" \
+  -d '{"projectId": 31, "featureName": "Nueva Feature", "description": "Descripción", "status": "pendiente"}'
+```
 
-- Navegador web moderno con soporte para HTML5, CSS3 y JavaScript.
-- Archivos de video ubicados en la carpeta `videos/` con los nombres especificados en `functions.js`.
+### Ver Features del Proyecto
+```bash
+curl http://localhost:3000/api/project-tracker/features?projectId=31
+```
 
-![Configuración - Los videos deben estar localizados en la carpeta Videos](images/Ruleta-de-videos-5.jpg)
-## Autor
+---
+*Generado automáticamente por Project Tracker*
 
-Proyecto creado por Jho Garcia.

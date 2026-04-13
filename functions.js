@@ -1,15 +1,30 @@
 // Lista de niños y sus videos
 const niños = [
-  { nombre: "Juan", video: "videos/video1.mp4" },
-  { nombre: "Ana", video: "videos/video2.mp4" },
-  { nombre: "Pedro", video: "videos/video3.mp4" },
-  { nombre: "Maria", video: "videos/video4.mp4" },
-  { nombre: "Pedrito", video: "videos/video4.mp4" },
-  { nombre: "Carlos", video: "videos/video4.mp4" },
-  { nombre: "Arnold", video: "videos/video4.mp4" },
-  { nombre: "Pepito", video: "videos/video4.mp4" },
-  { nombre: "Marcos", video: "videos/video4.mp4" },
-  { nombre: "Julieta", video: "videos/video4.mp4" }
+  { nombre: "ANGULO SEBASTIAN", video: "videos/ANGULO SEBASTIAN.mp4" },
+  { nombre: "CELIS ANNIE", video: "videos/CELIS ANNIE.mp4" },
+  { nombre: "CIFUENTES MARIA CAMILA", video: "videos/CIFUENTES MARIA CAMILA.mp4" },
+  { nombre: "CRUZ SAMANTHA", video: "videos/CRUZ SAMANTHA.mp4" },
+  { nombre: "DAZA JUAN JOSE", video: "videos/DAZA JUAN JOSE.mp4" },
+  { nombre: "DIAZ VALERIE", video: "videos/DIAZ VALERIE.mp4" },
+  { nombre: "FRANCO IAN", video: "videos/FRANCO IAN.mp4" },
+  { nombre: "GARCIA MARTIN", video: "videos/GARCIA MARTIN.mp4" },
+  { nombre: "GOMEZ JULIETA", video: "videos/GOMEZ JULIETA.mp4" },
+  { nombre: "GUTIERRES JUAN ANDRES", video: "videos/GUTIERRES JUAN ANDRES.mp4" },
+  { nombre: "HERRERA LUCIANA", video: "videos/HERRERA LUCIANA.mp4" },
+  { nombre: "HERRERA ZARA", video: "videos/HERRERA ZARA.mp4" },
+  { nombre: "MALDONADO JUAN JOSE", video: "videos/MALDONADO JUAN JOSE.mp4" },
+  { nombre: "MONROY MIA", video: "videos/MONROY MIA.mp4" },
+  { nombre: "MORA SAMUEL", video: "videos/MORA SAMUEL.mp4" },
+  { nombre: "MORALES SARAH", video: "videos/MORALES SARAH.mp4" },
+  { nombre: "PARADA JUAN JOSE", video: "videos/PARADA JUAN JOSE.mp4" },
+  { nombre: "POVEDA DAVID", video: "videos/POVEDA DAVID.mp4" },
+  { nombre: "PUENTES JERONIMO", video: "videos/PUENTES JERONIMO.mp4" },
+  { nombre: "RAMOS JUAN JOSE", video: "videos/RAMOS JUAN JOSE.mp4" },
+  { nombre: "ROA JUAN JOSE", video: "videos/ROA JUAN JOSE.mp4" },
+  { nombre: "RODRIGUEZ DAVID SANTIAGO", video: "videos/RODRIGUEZ DAVID SANTIAGO.mp4" },
+  { nombre: "SANCHEZ EVANS", video: "videos/SANCHEZ EVANS.mp4" },
+  { nombre: "TRIANA ROXANNE", video: "videos/TRIANA ROXANNE.mp4" },
+  { nombre: "VALDERRAMA EMILY", video: "videos/VALDERRAMA EMILY.mp4" }
 ];
 
   
@@ -199,7 +214,7 @@ function openAdminModal() {
     nameInput.type = "text";
     nameInput.value = niño.nombre;
     nameInput.style.marginRight = "10px";
-    nameInput.style.width = "100px";
+    nameInput.style.width = "150px";
 
     // Create editable textbox for video URL without hyperlink behavior
     const videoInput = document.createElement("input");
