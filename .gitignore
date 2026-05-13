@@ -1,39 +1,53 @@
-videos/VALDERRAMA EMILY.mp4
-videos/TRIANA ROXANNE.mp4
-videos/SANCHEZ EVANS.mp4
-videos/RODRIGUEZ DAVID SANTIAGO.mp4
-videos/ROA JUAN JOSE.mp4
-videos/RAMOS JUAN JOSE.mp4
-videos/PUENTES JERONIMO.mp4
-videos/POVEDA DAVID.mp4
-videos/PARADA JUAN JOSE.mp4
-videos/OLD/PUENTES JERONIMO PART. 2.mp4
-videos/OLD/PUENTES JERONIMO PART. 1.mp4
-videos/OLD/MALDONADO JUAN JOSE PART.2.mp4
-videos/OLD/MALDONADO JUAN JOSE PART.1.mp4
-videos/OLD/GUTIERRES JUAN ANDRES PAR 2.mp4
-videos/OLD/GUTIERRES JUAN ANDRES PAR 1.mp4
-videos/OLD/GOMEZ JULIETA P2.mp4
-videos/OLD/GARCIA MARTIN.mp4
-videos/OLD/FRANCO IANP.1.mp4
-videos/OLD/FRANCO IAN P.2.mp4
-videos/MORALES SARAH.mp4
-videos/MORA SAMUEL.mp4
-videos/MONROY MIA.mp4
-videos/MALDONADO JUAN JOSE.mp4
-videos/HERRERA ZARA.mp4
-videos/HERRERA LUCIANA.mp4
-videos/GUTIERRES JUAN ANDRES.mp4
-videos/GOMEZ JULIETA.mp4
-videos/GARCIA MARTIN.mp4
-videos/FRANCO IAN.mp4
-videos/DIAZ VALERIE.mp4
-videos/DAZA JUAN JOSE.mp4
-videos/CRUZ SAMANTHA.mp4
-videos/CIFUENTES MARIA CAMILA.mp4
-videos/CELIS ANNIE.mp4
-videos/ANGULO SEBASTIAN.mp4
-kids.js
-.zip
-Versión estable V1.7.zip
+# ============================================================
+#  Ruleta de Videos / Audios
+#  No exponer datos personales ni contenido sensible.
+# ============================================================
+
+# ---- Listas reales de niños (datos personales) ----
+# kids.js es el archivo que cada despliegue mantiene LOCAL.
+# kids.sample.js sí se versiona como plantilla.
+**/kids.js
+!**/kids.sample.js
+
+# Antiguos archivos sueltos con datos
 kids,js
+
+# ---- Carpetas con archivos multimedia del alumnado ----
+# Preescolar (videos individuales de los niños)
+Preescolar/Videos Preescolar/
+# Quinto (audios individuales de los niños)
+quinto/Audios Quinto/
+# Carpeta antigua de videos (V1)
+videos/
+
+# ---- Versión 1.0 archivada ----
+# Contiene la lista vieja de niños, data.txt y videos antiguos.
+# Si la quieres conservar fuera de git, déjala localmente.
+Versión 1.0/
+
+# ---- Archivos sensibles sueltos ----
+*.xlsx
+*.xls
+*.csv
+data.txt
+
+# ---- Empaques / backups del proyecto ----
+*.zip
+*.rar
+*.7z
+
+# ---- OS / IDE ----
+.DS_Store
+Thumbs.db
+ehthumbs.db
+.vscode/
+.idea/
+
+# ---- Logs ----
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ---- Node (por si más adelante se usa) ----
+node_modules/
